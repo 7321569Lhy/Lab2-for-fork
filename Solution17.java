@@ -23,17 +23,28 @@ class Solution {
         put('A', 0);
         put('C', 1);
         put('G', 2);
+
         put('T', 3);
     }};
 
     public static List<String> findRepeatedDnaSequences(String s) {
         List<String> ans = new ArrayList<String>();
         int n = s.length();
+
+        put('T', 3); //
+    }};
+
+    public List<String> findRepeatedDnaSequences(String s) { //
+        List<String> ans = new ArrayList<>();  //
+        int n = s.length();//
+
         if (n <= L) {
             return ans;
         }
         int x = 0;
+
         for (int i = 0; i < L - 1; ++i) {
+        for (int i = 0; i < L-1 ; ++i) {
             x = (x << 2) | bin.get(s.charAt(i));
         }
         Map<Integer, Integer> cnt = new HashMap<Integer, Integer>();
